@@ -1,0 +1,20 @@
+package package1;
+
+public class WrapperClass {
+    public static void main(String[] args) {
+   
+        int a = 10;
+        String s = "10";
+        
+        Integer i = new Integer(10);
+        System.out.println(i);
+        
+        Float f = new Float(0.00);
+        System.out.println(f);
+        
+        Double d = new Double(0.4);
+        System.out.println(d);
+        
+        
+    }
+}
