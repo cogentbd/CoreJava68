@@ -38,6 +38,5 @@ public class ExceptionHandling {
         
         System.out.println(result);
         System.err.println("EoF");
-        System.out.println("Git Testing");
     }
 }
