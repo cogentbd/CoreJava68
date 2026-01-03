@@ -111,10 +111,15 @@ class TestMyLand {
           c.myLand();
           Parent pc = new Child();
           pc.myLand();
+          
+          IXA ixa = new Child();
+   
+          
+          
+          
           Parent p = new Parent();
           p.myLand();
           Parent parent = c.myParent();  
-         
           IXA aa = new Child();
           
     }

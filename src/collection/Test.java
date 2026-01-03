@@ -1,68 +1,111 @@
 package collection;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.sun.javafx.scene.control.skin.VirtualFlow;
+import java.util.*;
+
 
 public class Test {
-    
-    static Person[] getPersons(Person p[]){
-        return p;
-    }
-    
-   static List getList(List l){
-        return l;
-    }
+   
     
     public static void main(String[] args) {
-        Person jodu = new Person("Jodu", 20, 20000.00);
-        Person modhu = new Person("Modhu", 22, 22000.00);
-        Person kodu = new Person("Kodu", 24, 24000.00);
+        Employee e1 = new Employee(1001, "Mr. A", 25, new SalaryStructure(15000, 20000, 25000, "NORMAL", 2500), new EmployeeAddress("Kakrail", 4, "Motijheel", 1000));
+        //System.out.println(e1);
+        //System.out.println(e1.getAddr().getPostalCode());
         
-        Person ppls[] = new Person[3];
-        ppls[0] = jodu;        
-        ppls[1] = modhu;        
-        ppls[2] = kodu; 
+        EmployeeAddress e2Addr = new EmployeeAddress("NewBazar", 7, "Rampura", 1212);
+        SalaryStructure e2Salary = new SalaryStructure(15000, 20000, 25000, "NORMAL", 2500);
+        Employee e2 = new Employee(1002, "Mr. B", 30, e2Salary, e2Addr);
+
+        EmployeeAddress e3Addr = new EmployeeAddress("Gulshan2", 10, "Gulshan", 1217);
+        SalaryStructure e3Salary = new SalaryStructure(15000, 20000, 25000, "NORMAL", 2500);
+        Employee e3 = new Employee(1003, "Mr. C", 35, e3Salary, e3Addr);
         
-        Person pp[] = getPersons(ppls);
-        
-        for (Person person : pp) {
-            System.out.println(person);
-        }
-        
+        //Employer employer = new Employer();
+        //Employer[] emps = {e1, e2, employer};
+        //emps[2] = e3;
+        //Employee[] emps = new Employee[2];
+        //System.out.println(emps[2]);
         
         List l = new ArrayList();
-        l.add(new Person("", 0, 0));
-        l.add(new ChildOfThePerson());
-        l.add(new A());
-        l.add(new B());
+        l.add(5);
+        l.add(4);
+        l.add(3);
+        l.add(2);
+        l.add("Hello");
+        l.add(e1);
+        l.add(e2);
+        l.add(e3);
+        l.add(new Employer());
         
-        getList(l);
+        //System.out.println(l.size());
+        for (int i = 0; i < l.size(); i++) {
+            System.out.println(i + " " + l.get(i));
+        }
+
+        List empList = new ArrayList();
+        empList.add(e1);
+        empList.add(e1);
+        empList.add(e3);
+        System.out.println("--------------------List--------------------");
+        for (Object o : empList) {
+            System.out.println(o);
+        }
+        
+        Set set = new LinkedHashSet();
+        set.add(e1);
+        set.add(e1);
+        set.add(e2);
+        
+        System.out.println("--------------------Set--------------------");
+
+        for (Object o : set) {
+            System.out.println(o);
+        }
+        
+//     ---------------- Type Safety :: Generics -------------------------          
+        /*
+        placeholders (commonly a single uppercase letter like 
+        <T> for Type, 
+                <E> for Element, 
+                        <K> for Key, or 
+                                <V> for Value)
+                                    */
+        List<Employee> nL = new ArrayList<Employee>();
+        nL.add(e1);
+        nL.add(e2);
+        nL.add(e3);
+        
+//      -------------------------- Map -------------------------
+        System.out.println("-------------------------- Map -------------------------");
+        Map map = new HashMap();
+        //map.put(key, value);
+        map.put("A", e1);
+        map.put(2, e2);
+        map.put(1.0, e3); 
+        
+        System.out.println(map.get(2));
+        
+        Map<Integer, Employee> map1 = new HashMap();
+        map1.put(1, e3);
     }
 }
 
 
-class Person {
-    private String name;
-    private int age;
-    private double salary;
-    private ChildOfThePerson chl;
-    
-    public Person(String name, int age, double salary) {
-        this.name = name;
-        this.age = age;
-        this.salary = salary;
-    }
-
-    @Override
-    public String toString() {
-        return name + " " + age + " " + salary;
-    }
-}
-
-class ChildOfThePerson {
 
 
-}
 
-class A{}
-class B{}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
