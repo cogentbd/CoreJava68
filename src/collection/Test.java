@@ -1,6 +1,5 @@
 package collection;
 
-import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.util.*;
 
 
@@ -76,7 +75,7 @@ public class Test {
         nL.add(e3);
         
 //      -------------------------- Map -------------------------
-        System.out.println("-------------------------- Map -------------------------");
+        System.out.println("--------------------Map--------------------");
         Map map = new HashMap();
         //map.put(key, value);
         map.put("A", e1);
@@ -87,6 +86,43 @@ public class Test {
         
         Map<Integer, Employee> map1 = new HashMap();
         map1.put(1, e3);
+        
+        
+        // ------------------------------- Queue ----------------------
+        //FIFO
+        //LIFO
+        System.out.println("--------------------Queue--------------------");
+        Queue q = new PriorityQueue();
+        q.add(1);
+        q.add(2);
+        q.add(3);
+        
+        System.out.println(q);
+        System.out.println(q.poll()); //removes and retrieve the head element
+        System.out.println(q);
+        System.out.println(q.peek()); //retrieve the head element
+        System.out.println(q);
+        
+        q.remove(); //removes the head element
+        System.out.println(q);
+        
+        System.out.println(q.remove(3));
+        System.out.println(q);
+        
+         // ------------------------------- Example ----------------------
+        System.out.println("--------------------Example--------------------");
+        Map<String, String> m = new HashMap();
+        m.put("A", "AA");
+        m.put("B", "BB");
+        m.put("C", "CC");
+        for (String s : m.keySet()) {
+            System.out.println(s);
+        }
+        System.out.println(m.get("A"));
+
+
+        
+        
     }
 }
 
