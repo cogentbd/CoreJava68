@@ -1,5 +1,7 @@
 package classobject;
 
+import inheritance.TestA;
+
 public class ClassType {
     int a;
     static Fruit f;
@@ -9,10 +11,17 @@ public class ClassType {
     int aa(){
         return 0;
     }  
+    static {
+    
+    }
+    
     public static void main(String[] args) {
         System.out.println(f);
         int a = 0;
         Fruit f = ff();
+        
+        
+        
     }
     
     Apple apple; //null
@@ -29,6 +38,8 @@ public class ClassType {
         return new Apple();
     }
     Fruit ff2 = new Apple();
+    
+   
 }
 
 class Fruit {}

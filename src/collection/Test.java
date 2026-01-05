@@ -7,6 +7,13 @@ public class Test {
    
     
     public static void main(String[] args) {
+       EmployeeDAO eDAO = new EmployeeDAO();
+       List<Employee> eList = eDAO.getAllEmployees(); //list of employees
+        
+        for (Employee employee : eList) {
+            System.out.println(employee);
+        }
+       
         Employee e1 = new Employee(1001, "Mr. A", 25, new SalaryStructure(15000, 20000, 25000, "NORMAL", 2500), new EmployeeAddress("Kakrail", 4, "Motijheel", 1000));
         //System.out.println(e1);
         //System.out.println(e1.getAddr().getPostalCode());
@@ -119,6 +126,7 @@ public class Test {
             System.out.println(s);
         }
         System.out.println(m.get("A"));
+        
 
 
         
