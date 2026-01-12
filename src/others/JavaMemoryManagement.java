@@ -3,19 +3,30 @@ package others;
 import model.Person;
 
 
-//Method Area :: class structure, superclass name, interface name, and constructors.
-public class JavaMemoryManagement extends Person/*Method Area*/{ 
-   
-    public JavaMemoryManagement() {/*Method Area*/
+class C{
+    
+    public C() {
     }
     
-    
-    
+}
+
+
+    //Method Area :: class structure, superclass name, interface name, and constructors.
     //initialized by default value
-    //instance variable/ primitive type/ field variable/ global scope
+public class JavaMemoryManagement extends Person/*Method Area*/{ 
+    
+    int a;
+   
+    public JavaMemoryManagement() {
+    }
+    
+    void test(){
+    }
+    
     /*
     Heap: is a single area where JVM allocates memory for -Objects, 
-    including method code , static variables & instance variables. 
+    including method code , static variables & instance variables.
+    
     @ interface - all values in interface are constants i.e final static, 
     so it's stored on Heap only.
     */
@@ -23,13 +34,12 @@ public class JavaMemoryManagement extends Person/*Method Area*/{
     //static variable
     static int staticValue; //static variables are stored in the PermGen section of the heap
     static final int finalValue = 10; //final variables store in Stack
-    //class type property
-    //is a relationship
-    Person person; //reference of the Person class
-    // ClassName.method() is applicaple for static methods
+
+    Person person; 
+
     //String object
     String s = "String value";
-    String w = s; //reference of s
+    String w = s; 
     int arr[] = new int[5]; //primitive type array
     static Person persons[] = new Person[2]; //class type
     /*
@@ -73,9 +83,7 @@ public class JavaMemoryManagement extends Person/*Method Area*/{
         System.out.println(jm.getPerson());
 
         System.out.println(jm.getPerson().getAge() + "  " + jm.getPerson().getAddress());
-        /*
-            https://findanyanswer.com/where-variables-are-stored-in-java
-        */
+   
         
         int aa = 10;
         int bb = 15;
@@ -88,5 +96,16 @@ public class JavaMemoryManagement extends Person/*Method Area*/{
         z = 15;
         int arr[] = new int[z];
         arr = new int[10];
+        T t = new T();
+        T t4 = new T();
+        
+        int qa = 10;
+        int aaa;
+        String text = "hello";
     }
+T t;
+
+    
 }
+
+class T {}

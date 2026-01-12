@@ -8,7 +8,7 @@ class EmployeeAddress {
 
     public EmployeeAddress(String address, int road, String area, int postalCode) {
         this.address = address;
-        this.road = road;
+    this.road = road;
         this.area = area;
         this.postalCode = postalCode;
     }

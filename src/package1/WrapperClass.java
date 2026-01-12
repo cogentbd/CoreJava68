@@ -1,8 +1,15 @@
 package package1;
 
 public class WrapperClass {
+    int a;
+    static int aa;
+    
+    
     public static void main(String[] args) {
-   
+        WrapperClass wc = new WrapperClass();
+        System.out.println(wc);
+        
+        
         int a = 10;
         String s = "10";
         
@@ -16,5 +23,8 @@ public class WrapperClass {
         System.out.println(d);
         
         
+        int aa = 10;
+        Integer aai = new Integer(10);
+     
     }
 }
