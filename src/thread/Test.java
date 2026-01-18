@@ -1,29 +1,34 @@
 package thread;
 
-public class Test {
-    
-    void x(){System.out.println("X");}
-    void y(){System.out.println("Y");}
-    
-    public static void main(String[] args) {
-        Test tt = new Test();
-        for (int i = 0; i < 5; i++) {
-            tt.x();
-        }
-        for (int i = 0; i < 5; i++) {
-            tt.y();
-        }
-        
-        A a = new A();
-        a.x();
-        B b = new B();
-        b.y();
+class A implements Runnable{
+    @Override
+    public void run() {
+        System.out.println("run");
     }
 }
 
-class A{
-    void x(){System.out.println("X");}
+public class Test {
+       
+        static A obj = new A();
+        int x = 11;
+        
+        static int a = 10;
+        static Test test(){
+            return new Test();
+        }
+        
+        
+     public static void main(String[] args) {
+         
+         System.out.println(Test.obj);
+         
+         System.out.println(Test.a);
+         System.out.println(Test.test());
+        
+     }
+    
+
+    
+
 }
-class B{
-    void y(){System.out.println("Y");}
-}
+

@@ -13,7 +13,7 @@ public class CreateProperty {
 
         try {
 
-            output = new FileOutputStream("config.properties");
+            output = new FileOutputStream("C:\\Users\\JAVA\\Desktop\\db.properties");
 
             // set the properties value
             prop.setProperty("database", "localhost");

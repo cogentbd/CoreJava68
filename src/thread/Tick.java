@@ -8,7 +8,7 @@ public class Tick implements Runnable{
         try {
             for (int i = 1; i <= 10; i++) {
                 System.out.print("Tick ");
-                Thread.sleep(500);
+                Thread.sleep(5);
                 synchronized (TestClock.LOCK) {
                     TestClock.LOCK.notify();//notify tock, it's his turn  [1]
                     TestClock.LOCK.wait();//and wait until tock notify you for next cycle  [4]
