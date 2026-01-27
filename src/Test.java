@@ -55,7 +55,7 @@ public class Test{
             arr = new int[10];
             //System.out.println(arr[2]);
             
-            Integer arr2[] = {10, 20, 30};
+            Integer arr2[] = {20, 30, 40, 50, 60, 70, 80};
                         //String methods
             String str = "Hello";
             
